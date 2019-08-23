@@ -64,6 +64,13 @@ class BowlingCalculatorTest {
     assertThat(score, is(73))
   }
 
+  @Test
+  def superTestFromPerok(): Unit = {
+    val list = List(Frame(2, 4),Frame(0, 10),Frame(7, 0),Frame(10, 0),Frame(6, 2),Frame(9, 1),Frame(3,3),Frame(10,0),Frame(10,0),Frame(10,7,Some(2)))
+    val score = BowlingCalculator.calculateScore(list)
+    assertThat(score, is(151))
+  }
+
 
 
 
